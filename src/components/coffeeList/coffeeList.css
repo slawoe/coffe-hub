@@ -1,0 +1,23 @@
+.list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.list > li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 10px;
+}
+
+.list > li > span {
+  flex-grow: 1;
+}
+
+.list > li > img:first-child {
+  flex: 0 0 25%;
+}
+
+.list > li > img:last-child {
+  flex: 0 0 10%;
+}
