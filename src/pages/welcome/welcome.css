@@ -6,3 +6,89 @@
   justify-content: center;
   align-items: center;
 }
+
+.animation-logo {
+  animation: display 5s linear, zoomIn 5s ease-in-out;
+  -moz-animation: display 5sinear, zoomIn 5s ease-in-out; /* Für Firefox */
+  -webkit-animation: display 5sinear, zoomIn 5s ease-in-out; /* Für Safari und Chrome */
+  -o-animation: display 5sinear, zoomIn 5s ease-in-out; /* Für Opera */
+}
+
+@keyframes display {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes display {
+  /* Für Firefox */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes display {
+  /* Für Safari und Chrome */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes display {
+  /* Für Opera */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@-moz-keyframes zoomIn {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@-webkit-keyframes zoomIn {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@-o-keyframes zoomIn {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
