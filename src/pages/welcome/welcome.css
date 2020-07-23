@@ -9,9 +9,9 @@
 
 .animation-logo {
   animation: display 5s linear, zoomIn 5s ease-in-out;
-  -moz-animation: display 5sinear, zoomIn 5s ease-in-out; /* Für Firefox */
-  -webkit-animation: display 5sinear, zoomIn 5s ease-in-out; /* Für Safari und Chrome */
-  -o-animation: display 5sinear, zoomIn 5s ease-in-out; /* Für Opera */
+  -moz-animation: display 5s linear, zoomIn 5s ease-in-out; /* Für Firefox */
+  -webkit-animation: display 5s linear, zoomIn 5s ease-in-out; /* Für Safari und Chrome */
+  -o-animation: display 5s linear, zoomIn 5s ease-in-out; /* Für Opera */
 }
 
 @keyframes display {
