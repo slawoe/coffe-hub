@@ -1,0 +1,26 @@
+.topnavbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  border: none;
+  background: transparent;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 70px;
+}
+
+.topnavbar > button {
+  position: relative;
+  border: none;
+  background: transparent;
+  text-decoration: none;
+}
+
+.topnavbar > button:first-child {
+  padding-left: 20px;
+}
+
+.topnavbar > button:last-child {
+  padding-right: 20px;
+}
