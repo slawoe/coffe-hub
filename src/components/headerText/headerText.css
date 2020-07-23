@@ -1,0 +1,9 @@
+.slogan {
+  font-weight: 400;
+  font-size: 2.2rem;
+}
+
+.slogan > span {
+  color: #b98875;
+  font-weight: 700;
+}

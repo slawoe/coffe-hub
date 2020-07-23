@@ -1,0 +1,9 @@
+.topnavbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.topnavbar > button {
+  border: none;
+  background: transparent;
+}
