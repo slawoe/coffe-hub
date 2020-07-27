@@ -35,3 +35,9 @@
 .quantitySelector > button > svg {
   fill: #fff;
 }
+
+.quantitySelector > button:first-child:disabled,
+.quantitySelector > button:last-child:disabled {
+  background: grey;
+  cursor: none;
+}
