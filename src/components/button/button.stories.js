@@ -10,9 +10,10 @@ function createButton(buttonText) {
   return button;
 }
 
-//good version for multiple addEventListeners
 export const addToCart = () => {
   const button = createButton("Add to cart");
+
+  //good version for multiple addEventListeners
 
   //   function addEventListenerToButton(button) {
   //     button.addEventListener("click", () => {
