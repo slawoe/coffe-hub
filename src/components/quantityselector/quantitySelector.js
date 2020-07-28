@@ -28,7 +28,7 @@ export function createQuantitySelector() {
 
   quantitySelectorDecreaseButton.addEventListener("click", () => {
     const oldResult = Number(counterDiv.innerHTML);
-    if (oldResult === 2) {
+    if (oldResult === 1) {
       quantitySelectorDecreaseButton.disabled = true;
     }
     counterDiv.innerHTML = oldResult - 1;
@@ -36,7 +36,7 @@ export function createQuantitySelector() {
 
   quantitySelectorIncreaseButton.addEventListener("click", () => {
     const oldResult = Number(counterDiv.innerHTML);
-    if (oldResult === 1) {
+    if (oldResult === 0) {
       quantitySelectorDecreaseButton.disabled = false;
     }
     counterDiv.innerHTML = oldResult + 1;
