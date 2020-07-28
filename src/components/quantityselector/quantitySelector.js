@@ -5,15 +5,17 @@ export function createQuantitySelector() {
   const quantitySelectorDecreaseButton = document.createElement("button");
   quantitySelectorDecreaseButton.className = "quantitySelectorDecrease";
   div.prepend(quantitySelectorDecreaseButton);
+
   const decreaseSVG = document.createElement("img");
-  decreaseSVG.src = "../..assets/minus.svg";
+  decreaseSVG.src = "minus.svg";
   quantitySelectorDecreaseButton.append(decreaseSVG);
 
   const quantitySelectorIncreaseButton = document.createElement("button");
   quantitySelectorIncreaseButton.className = "quantitySelectorIncrease";
   div.append(quantitySelectorIncreaseButton);
+
   const increaseSVG = document.createElement("img");
-  increaseSVG.src = "../..assets/plus.svg";
+  increaseSVG.src = "plus.svg";
   quantitySelectorIncreaseButton.append(increaseSVG);
 
   const counterDiv = document.createElement("div");

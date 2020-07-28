@@ -28,6 +28,9 @@ export const basic = () => {
   const quantitySelector = createQuantitySelector();
   main.append(quantitySelector);
 
+  const linebreak = document.createElement("br");
+  main.append(linebreak);
+
   const button = createButton("Add to cart");
   main.append(button);
   return main;
