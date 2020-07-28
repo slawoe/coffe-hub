@@ -2,10 +2,20 @@ import "./button.css";
 
 export default { title: "Button" };
 
+function createButton(buttonText) {
+  const button = document.createElement("button");
+  button.className = "btn";
+  const text = document.createTextNode(buttonText);
+  button.append(text);
+  return button;
+}
+
 export const addToCart = () => {
-  const button = document.createElement(`button`);
-  button.classList.add(`btn`);
-  button.innerText = "Add to cart";
+  const button = createButton("Add to cart");
+
+  button.addEventListener("click", () => {
+    confirm("Are you sure?");
+  });
 
   return button;
 };
