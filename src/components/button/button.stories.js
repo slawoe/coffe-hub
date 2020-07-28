@@ -10,12 +10,22 @@ function createButton(buttonText) {
   return button;
 }
 
+//good version for multiple addEventListeners
 export const addToCart = () => {
   const button = createButton("Add to cart");
 
-  button.addEventListener("click", () => {
-    confirm("Are you sure?");
-  });
+  function addEventListenerToButton(button) {
+    button.addEventListener("click", () => {
+      confirm("Are you sure you don't want more coffee, you cheapskate?");
+    });
+  }
+  addEventListenerToButton(button);
+
+  //newer and better way for single addEventListener
+
+  //   button.addEventListener("click", () => {
+  //     confirm("Are you sure you don't want more coffee, you cheapskate?");
+  //   });
 
   return button;
 };
