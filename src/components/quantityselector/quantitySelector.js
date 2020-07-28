@@ -7,7 +7,7 @@ export function createQuantitySelector() {
   div.prepend(quantitySelectorDecreaseButton);
 
   const decreaseSVG = document.createElement("img");
-  decreaseSVG.src = "minus.svg";
+  decreaseSVG.src = "../../assets/minus.svg";
   quantitySelectorDecreaseButton.append(decreaseSVG);
 
   const quantitySelectorIncreaseButton = document.createElement("button");
@@ -15,7 +15,7 @@ export function createQuantitySelector() {
   div.append(quantitySelectorIncreaseButton);
 
   const increaseSVG = document.createElement("img");
-  increaseSVG.src = "plus.svg";
+  increaseSVG.src = "../../assets/plus.svg";
   quantitySelectorIncreaseButton.append(increaseSVG);
 
   const counterDiv = document.createElement("div");
