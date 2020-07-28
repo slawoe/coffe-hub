@@ -14,18 +14,32 @@ function createButton(buttonText) {
 export const addToCart = () => {
   const button = createButton("Add to cart");
 
-  function addEventListenerToButton(button) {
-    button.addEventListener("click", () => {
-      confirm("Are you sure you don't want more coffee, you cheapskate?");
-    });
-  }
-  addEventListenerToButton(button);
+  //   function addEventListenerToButton(button) {
+  //     button.addEventListener("click", () => {
+  //       const answer = confirm(
+  //         "Are you sure you don't want more coffee, you cheapskate?"
+  //       );
+  //       if (answer === true) {
+  //         alert("Scrooge! Don't you have any friends you can buy coffee for?");
+  //       } else {
+  //         alert("Good boy! Add more coffee! Buy it all!");
+  //       }
+  //     });
+  //   }
+  //   addEventListenerToButton(button);
 
   //newer and better way for single addEventListener
 
-  //   button.addEventListener("click", () => {
-  //     confirm("Are you sure you don't want more coffee, you cheapskate?");
-  //   });
+  button.addEventListener("click", () => {
+    const answer = confirm(
+      "Are you sure you don't want more coffee, you cheapskate?"
+    );
+    if (answer === true) {
+      alert("Scrooge! Don't you have any friends you can buy coffee for?");
+    } else {
+      alert("Good boy! Add more coffee! Buy it all!");
+    }
+  });
 
   return button;
 };
