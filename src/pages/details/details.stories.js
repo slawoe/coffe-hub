@@ -1,43 +1,33 @@
-import { useEffect } from "@storybook/client-api";
-import details from "./details.html";
+// import { useEffect } from "@storybook/client-api";
+// import details from "./details.html";
 
-export default {
-  title: "Pages/Details",
-};
+// export default {
+//   title: "Pages/Details",
+// };
+
+// export const basic = () => {
+//   useEffect(() => {
+//     const button = document.querySelector(".btn");
+//     button.addEventListener("click", () => {
+//       alert(button.innerHTML);
+//       button.innerHTML = "Neuer Inhalt";
+//     });
+//   });
+
+//   return details;
+// };
+
+import { createButton } from "../../components/button/button";
+
+export default { title: "Pages/Details" };
 
 export const basic = () => {
-  useEffect(() => {
-    const button = document.querySelector(".btn");
-    button.addEventListener("click", () => {
-      alert(button.innerHTML);
-      button.innerHTML = "Neuer Inhalt";
-    });
-  });
+  const main = document.createElement("main");
 
-  return details;
+  // const quantitySelector = createQuantitySelector();
+  // main.append(quantitySelector)
+
+  const button = createButton("Add to cart");
+  main.append(button);
+  return main;
 };
-
-// /*Calls internal alert function*/
-// //oneline comment
-
-// // Variable mit String
-// let message = "Hello Fishy";
-// // nicht nochmal let schreiben, da es schon eine Variante gibt
-// message = "Fish Ahoi";
-// // Aufruf
-
-// // alert("Hallo");
-// // alert("World");
-
-// // static var
-// const PI = 3.141592;
-
-// // keine Sonderzeichen etc, CamelCase
-// const bootcampStudent = "Slawo";
-
-// Zahlen
-// const numberOfStudents = 15;
-
-// //weitere Variable
-// const message = `Hello ${numberOfStudents} fishes`;
-// alert(message);
