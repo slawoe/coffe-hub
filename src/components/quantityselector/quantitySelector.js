@@ -1,18 +1,18 @@
 import minus from "../../assets/minus.svg";
 import plus from "../../assets/plus.svg";
 export function createQuantitySelector() {
-  const div = document.createElement("div");
-  div.className = "quantitySelector";
+  const quantitySelector = document.createElement("div");
+  quantitySelector.className = "quantitySelector";
 
   const quantitySelectorDecreaseButton = document.createElement("button");
-  div.prepend(quantitySelectorDecreaseButton);
+  quantitySelector.prepend(quantitySelectorDecreaseButton);
 
   const decreaseSVG = document.createElement("img");
   decreaseSVG.src = minus;
   quantitySelectorDecreaseButton.append(decreaseSVG);
 
   const quantitySelectorIncreaseButton = document.createElement("button");
-  div.append(quantitySelectorIncreaseButton);
+  quantitySelector.append(quantitySelectorIncreaseButton);
 
   const increaseSVG = document.createElement("img");
   increaseSVG.src = plus;
@@ -38,5 +38,5 @@ export function createQuantitySelector() {
     counterDiv.innerHTML = oldResult + 1;
   });
 
-  return div;
+  return quantitySelector;
 }
