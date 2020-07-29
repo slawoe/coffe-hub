@@ -8,22 +8,31 @@ export const createQuantitySelector = () => {
     className: "quantitySelector",
   });
   // MinusButton
-  const quantitySelectorDecreaseButton = createElement("button", {});
+  const quantitySelectorDecreaseButton = createElement("button", {
+    type: "button",
+  });
   //MinusButtonIMG
   const decreaseSVG = createElement("img", {
     src: minus,
     alt: "Minus",
   });
   // PlusButton
-  const quantitySelectorIncreaseButton = createElement("button", {});
+  const quantitySelectorIncreaseButton = createElement("button", {
+    type: "button",
+  });
   // PlusButtonIMG
   const increaseSVG = createElement("img", {
     src: plus,
     alt: "Plus",
   });
   // CounterDIV
-  const counterDiv = createElement("div", {
-    innerHTML: "1",
+  const counterDiv = createElement("input", {
+    className: "quantitySelector__input",
+    type: "number",
+    value: 1,
+    min: 1,
+    max: 9,
+    name: "quantity",
   });
   // PositioningOfItems
   quantitySelector.prepend(quantitySelectorDecreaseButton);
@@ -33,19 +42,25 @@ export const createQuantitySelector = () => {
   quantitySelectorDecreaseButton.after(counterDiv);
   // EventListeners
   quantitySelectorDecreaseButton.addEventListener("click", () => {
-    const oldResult = Number(counterDiv.innerHTML);
+    const oldResult = Number(counterDiv.value);
     if (oldResult === 1) {
       quantitySelectorDecreaseButton.disabled = true;
     }
-    counterDiv.innerHTML = oldResult - 1;
+    if (oldResult === 9) {
+      quantitySelectorIncreaseButton.disabled = false;
+    }
+    counterDiv.value = oldResult - 1;
   });
 
   quantitySelectorIncreaseButton.addEventListener("click", () => {
-    const oldResult = Number(counterDiv.innerHTML);
+    const oldResult = Number(counterDiv.value);
     if (oldResult === 0) {
       quantitySelectorDecreaseButton.disabled = false;
     }
-    counterDiv.innerHTML = oldResult + 1;
+    if (oldResult === 8) {
+      quantitySelectorIncreaseButton.disabled = true;
+    }
+    counterDiv.value = oldResult + 1;
   });
 
   return quantitySelector;

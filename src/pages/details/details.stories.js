@@ -1,3 +1,4 @@
+// OLDER VERSION
 // import { useEffect } from "@storybook/client-api";
 // import details from "./details.html";
 
@@ -21,6 +22,8 @@ import "./details.css";
 import { createButton } from "../../components/button/button";
 import { createQuantitySelector } from "../../components/quantitySelector/quantitySelector";
 import { createElement } from "../../utils/elements";
+import { createSizeSelector } from "../../components/sizeSelector/sizeSelector";
+import { createSugarSelector } from "../../components/sugarSelector/sugarSelector";
 import macchiato from "../../assets/macciato.svg";
 
 export default { title: "Pages/Details" };
@@ -58,13 +61,13 @@ export const basic = () => {
     innerText: "Size",
   });
 
-  const size = createElement("input");
+  const size = createSizeSelector();
 
   const coffeeSugar = createElement("label", {
     innerText: "Sugar",
   });
 
-  const sugar = createElement("input");
+  const sugar = createSugarSelector();
 
   const quantitySelector = createQuantitySelector();
 
@@ -90,6 +93,13 @@ export const basic = () => {
   //EventListener
   form.addEventListener("submit", (event) => {
     event.preventDefault();
+
+    const formData = new FormData(form);
+    // List key/value pairs https://javascript.info/formdata
+    for (let [name, value] of formData) {
+      console.log(`${name} = ${value}`); // key1=value1, then key2=value2
+    }
+    alert("Formular übertragen, siehe in die Console.");
   });
   return main;
 };

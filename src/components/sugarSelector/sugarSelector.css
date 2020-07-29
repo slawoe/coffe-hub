@@ -1,0 +1,19 @@
+.sugar {
+  display: flex;
+  flex-direction: row;
+}
+
+.sugar input {
+  display: none;
+}
+
+.sugar label span {
+  color: #cf9775;
+  filter: opacity(0.3);
+  cursor: pointer;
+  padding-right: 15px;
+}
+
+.sugar input:checked ~ span {
+  filter: opacity(1);
+}

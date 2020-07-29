@@ -4,16 +4,16 @@ export function createButton(buttonText) {
   const text = document.createTextNode(buttonText);
   button.append(text);
 
-  button.addEventListener("click", () => {
-    const answer = confirm(
-      "Are you sure you don't want more coffee, you cheapskate?"
-    );
-    if (answer === true) {
-      alert("Scrooge! Don't you have any friends you can buy coffee for?");
-    } else {
-      alert("Good boy! Add more coffee! Buy it all!");
-    }
-  });
+  // button.addEventListener("click", () => {
+  //   const answer = confirm(
+  //     "Are you sure you don't want more coffee, you cheapskate?"
+  //   );
+  //   if (answer === true) {
+  //     alert("Scrooge! Don't you have any friends you can buy coffee for?");
+  //   } else {
+  //     alert("Good boy! Add more coffee! Buy it all!");
+  //   }
+  // });
 
   return button;
 }
