@@ -95,9 +95,8 @@ export const basic = () => {
     event.preventDefault();
 
     const formData = new FormData(form);
-    // List key/value pairs https://javascript.info/formdata
     for (let [name, value] of formData) {
-      console.log(`${name} = ${value}`); // key1=value1, then key2=value2
+      console.log(`${name} = ${value}`);
     }
     alert("Formular übertragen, siehe in die Console.");
   });
