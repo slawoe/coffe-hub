@@ -9,6 +9,7 @@ export function createQuantitySelector() {
 
   const decreaseSVG = document.createElement("img");
   decreaseSVG.src = minus;
+  decreaseSVG.alt = "Minus";
   quantitySelectorDecreaseButton.append(decreaseSVG);
 
   const quantitySelectorIncreaseButton = document.createElement("button");
@@ -16,6 +17,7 @@ export function createQuantitySelector() {
 
   const increaseSVG = document.createElement("img");
   increaseSVG.src = plus;
+  increaseSVG.alt = "Plus";
   quantitySelectorIncreaseButton.append(increaseSVG);
 
   const counterDiv = document.createElement("div");
