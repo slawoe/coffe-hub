@@ -12,14 +12,14 @@ export const createQuantitySelector = () => {
   //MinusButtonIMG
   const decreaseSVG = createElement("img", {
     src: minus,
-    alt: minus,
+    alt: "Minus",
   });
   // PlusButton
   const quantitySelectorIncreaseButton = createElement("button", {});
   // PlusButtonIMG
   const increaseSVG = createElement("img", {
     src: plus,
-    alt: plus,
+    alt: "Plus",
   });
   // CounterDIV
   const counterDiv = createElement("div", {
