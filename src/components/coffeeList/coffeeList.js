@@ -11,7 +11,6 @@ import { createElement } from "../../utils/elements";
 // export function createCoffeeList () {}
 
 export const createCoffeeList = () => {
-  // OuterDIV
   const listDiv = createElement("div", {
     className: "fullWidth",
   });
