@@ -10,7 +10,7 @@ This app is not deployed
 
 ## 📲 Design and layout infos
 
-Designed for web, no mobile design integrated
+Designed for mobile, no desktop design integrated
 
 ## 🔧 Development
 
